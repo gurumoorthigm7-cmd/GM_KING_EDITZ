@@ -881,34 +881,50 @@
 
 </div>
     <div>
-      https://formspree.io/f/xjglqpqp
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" id="fname" placeholder="John Doe">
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="femail" placeholder="john@email.com">
-          </form>
-        </div>
-        <div class="form-group">
-          <label>Platform</label>
-          <select id="fplatform">
-            <option value="">Select platform</option>
-            <option>YouTube</option>
-            <option>Instagram</option>
-            <option>Facebook</option>
-            <option>Multiple Platforms</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Project Details</label>
-          <textarea id="fmsg" placeholder="Tell me about your project, video length, style reference..."></textarea>
-        </div>
-        <div class="form-submit">
-          <button class="btn btn-primary" onclick="handleSubmit()">Send Message</button>
-        </div>
+      
+<form class="contact-form" action="https://formspree.io/f/xjglqpqp" method="POST">
+
+  <div class="form-row">
+
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" name="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="john@email.com" required>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label>Platform</label>
+
+    <select name="platform">
+      <option value="">Select platform</option>
+      <option>YouTube</option>
+      <option>Instagram</option>
+      <option>Facebook</option>
+      <option>Multiple Platforms</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Project Details</label>
+
+    <textarea name="message"
+      placeholder="Tell me about your project, video length, style reference..."
+      required></textarea>
+  </div>
+
+  <div class="form-submit">
+    <button type="submit" class="btn btn-primary">
+      Send Message
+    </button>
+  </div>
+
+</form>
         <div class="success-msg" id="successMsg">
           ✓ Message sent! I'll get back to you within 24 hours.
         </div>
