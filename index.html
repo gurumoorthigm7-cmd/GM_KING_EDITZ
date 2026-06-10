@@ -57,6 +57,14 @@
 }
 
 .logo img {
+
+.menu-toggle{
+  display:none;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
   height: 75px;
   width: auto;
   display: block;
@@ -622,6 +630,28 @@ nav ul {
   }
 
   @media (max-width: 900px) {
+
+.menu-toggle{
+  display:block;
+}
+
+nav{
+  flex-wrap:wrap;
+}
+
+nav ul{
+  display:none;
+  width:100%;
+  flex-direction:column;
+  text-align:center;
+  background:#111;
+  padding:1rem 0;
+}
+
+nav ul.show{
+  display:flex;
+}
+
 nav ul {
   gap: 0.5rem;
   font-size: 12px;
@@ -665,6 +695,11 @@ nav ul {
   <div class="logo">
     <img src="https://lh3.googleusercontent.com/d/1QkcHUkTrnKjE_3taPU3dskzEhvxACcqj" alt="GM_KING_EDITZ">
   </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+ ☰
+</div>
+
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
@@ -1010,6 +1045,11 @@ nav ul {
 </footer>
 
 <script>
+
+function toggleMenu(){
+  document.querySelector('nav ul').classList.toggle('show');
+}
+
   function filterCards(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
